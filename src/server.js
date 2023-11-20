@@ -15,9 +15,6 @@ app.use(express.json());
 
 app.post('/log', (req, res) => {
   const { log } = req.body;
-  console.log('log', log);
-  console.log(system);
-  console.log(typeof system.set);
   system.set(log);
   res.status(200).json({
     status: 'OK',
